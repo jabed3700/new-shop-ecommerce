@@ -1,10 +1,4 @@
-<!--
-Au<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -134,10 +128,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													</ul>
 												</div>
 												<div class="col-sm-3  multi-gd-img">
-														<a href="products.html"><img src="images/woo.jpg" alt=" "/></a>
+														<a href="products.html"><img src="{{asset('front')}}/images/woo.jpg" alt=" "/></a>
 												</div> 
 												<div class="col-sm-3  multi-gd-img">
-														<a href="products.html"><img src="images/woo1.jpg" alt=" "/></a>
+														<a href="products.html"><img src="{{asset('front')}}/images/woo1.jpg" alt=" "/></a>
 												</div>
 												<div class="clearfix"></div>
 											</div>
@@ -170,10 +164,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													</ul>
 												</div>
 												<div class="col-sm-3  multi-gd-img">
-														<a href="products1.html"><img src="images/woo3.jpg" alt=" "/></a>
+														<a href="products1.html"><img src="{{asset('front')}}/images/woo3.jpg" alt=" "/></a>
 												</div> 
 												<div class="col-sm-3  multi-gd-img">
-														<a href="products1.html"><img src="images/woo4.jpg" alt=" "/></a>
+														<a href="products1.html"><img src="{{asset('front')}}/images/woo4.jpg" alt=" "/></a>
 												</div>
 												<div class="clearfix"></div>
 											</div>
@@ -200,7 +194,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<a href="checkout.html">
 									<h3> <div class="total">
 										<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-										<img src="images/bag.png" alt="" />
+										<img src="{{asset('front')}}/images/bag.png" alt="" />
 									</h3>
 								</a>
 								<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
@@ -220,16 +214,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="core-slider_viewport">
 						<div class="core-slider_list">
 							<div class="core-slider_item">
-								<img src="images/b1.jpg" class="img-responsive" alt="">
+								<img src="{{asset('front')}}/images/b1.jpg" class="img-responsive" alt="">
 							</div>
 							 <div class="core-slider_item">
-								 <img src="images/b2.jpg" class="img-responsive" alt="">
+								 <img src="{{asset('front')}}/images/b2.jpg" class="img-responsive" alt="">
 							 </div>
 							<div class="core-slider_item">
-								  <img src="images/b3.jpg" class="img-responsive" alt="">
+								  <img src="{{asset('front')}}/images/b3.jpg" class="img-responsive" alt="">
 							</div>
 							<div class="core-slider_item">
-								  <img src="images/b4.jpg" class="img-responsive" alt="">
+								  <img src="{{asset('front')}}/images/b4.jpg" class="img-responsive" alt="">
 							</div>
 						 </div>
 					</div>
@@ -260,7 +254,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="container">
 						<div class="col-md-6 ban-bottom">
 							<div class="ban-top">
-								<img src="images/p1.jpg" class="img-responsive" alt=""/>
+								<img src="{{asset('front')}}/images/p1.jpg" class="img-responsive" alt=""/>
 								<div class="ban-text">
 									<h4>Men’s Clothing</h4>
 								</div>
@@ -271,7 +265,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="col-md-6 ban-bottom3">
 							<div class="ban-top">
-								<img src="images/p2.jpg" class="img-responsive" alt=""/>
+								<img src="{{asset('front')}}/images/p2.jpg" class="img-responsive" alt=""/>
 								<div class="ban-text1">
 									<h4>Women's Clothing</h4>
 								</div>
@@ -279,7 +273,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="ban-img">
 								<div class=" ban-bottom1">
 									<div class="ban-top">
-										<img src="images/p3.jpg" class="img-responsive" alt=""/>
+										<img src="{{asset('front')}}/images/p3.jpg" class="img-responsive" alt=""/>
 										<div class="ban-text1">
 											<h4>T - Shirt</h4>
 										</div>
@@ -287,7 +281,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="ban-bottom2">
 									<div class="ban-top">
-										<img src="images/p4.jpg" class="img-responsive" alt=""/>
+										<img src="{{asset('front')}}/images/p4.jpg" class="img-responsive" alt=""/>
 										<div class="ban-text1">
 											<h4>Hand Bag</h4>
 										</div>
@@ -311,10 +305,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<figure>		
 											<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
 												<div class="grid-img">
-													<img  src="images/p6.jpg" class="img-responsive" alt="">
+													<img  src="{{asset('front')}}/images/p6.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="images/p5.jpg" class="img-responsive"  alt="">
+													<img  src="{{asset('front')}}/images/p5.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	
@@ -342,10 +336,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<figure>		
 											<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal2">
 												<div class="grid-img">
-													<img  src="images/p7.jpg" class="img-responsive" alt="">
+													<img  src="{{asset('front')}}/images/p7.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="images/p8.jpg" class="img-responsive"  alt="">
+													<img  src="{{asset('front')}}/images/p8.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	
@@ -370,10 +364,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<figure>		
 											<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal3">
 												<div class="grid-img">
-													<img  src="images/p10.jpg" class="img-responsive" alt="">
+													<img  src="{{asset('front')}}/images/p10.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="images/p9.jpg" class="img-responsive"  alt="">
+													<img  src="{{asset('front')}}/images/p9.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	
@@ -398,10 +392,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<figure>		
 											<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal4">
 												<div class="grid-img">
-													<img  src="images/p11.jpg" class="img-responsive" alt="">
+													<img  src="{{asset('front')}}/images/p11.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="images/p12.jpg" class="img-responsive"  alt="">
+													<img  src="{{asset('front')}}/images/p12.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	
@@ -449,10 +443,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														<figure>		
 															<a href="single.html">
 																<div class="grid-img">
-																	<img  src="images/p14.jpg" class="img-responsive" alt="">
+																	<img  src="{{asset('front')}}/images/p14.jpg" class="img-responsive" alt="">
 																</div>
 																<div class="grid-img">
-																	<img  src="images/p13.jpg" class="img-responsive"  alt="">
+																	<img  src="{{asset('front')}}/images/p13.jpg" class="img-responsive"  alt="">
 																</div>			
 															</a>		
 														</figure>	
@@ -474,10 +468,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														<figure>		
 															<a href="single.html">
 																<div class="grid-img">
-																	<img  src="images/p15.jpg" class="img-responsive" alt="">
+																	<img  src="{{asset('front')}}/images/p15.jpg" class="img-responsive" alt="">
 																</div>
 																<div class="grid-img">
-																	<img  src="images/p16.jpg" class="img-responsive"  alt="">
+																	<img  src="{{asset('front')}}/images/p16.jpg" class="img-responsive"  alt="">
 																</div>			
 															</a>		
 														</figure>	
@@ -502,10 +496,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														<figure>		
 															<a href="single.html">
 																<div class="grid-img">
-																	<img  src="images/p18.jpg" class="img-responsive" alt="">
+																	<img  src="{{asset('front')}}/images/p18.jpg" class="img-responsive" alt="">
 																</div>
 																<div class="grid-img">
-																	<img  src="images/p17.jpg" class="img-responsive"  alt="">
+																	<img  src="{{asset('front')}}/images/p17.jpg" class="img-responsive"  alt="">
 																</div>			
 															</a>		
 														</figure>	
@@ -530,10 +524,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														<figure>		
 															<a href="single.html">
 																<div class="grid-img">
-																	<img  src="images/p20.jpg" class="img-responsive" alt="">
+																	<img  src="{{asset('front')}}/images/p20.jpg" class="img-responsive" alt="">
 																</div>
 																<div class="grid-img">
-																	<img  src="images/p19.jpg" class="img-responsive"  alt="">
+																	<img  src="{{asset('front')}}/images/p19.jpg" class="img-responsive"  alt="">
 																</div>			
 															</a>		
 														</figure>	
@@ -563,10 +557,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														<figure>		
 															<a href="single.html">
 																<div class="grid-img">
-																	<img  src="images/p21.jpg" class="img-responsive" alt="">
+																	<img  src="{{asset('front')}}/images/p21.jpg" class="img-responsive" alt="">
 																</div>
 																<div class="grid-img">
-																	<img  src="images/p22.jpg" class="img-responsive"  alt="">
+																	<img  src="{{asset('front')}}/images/p22.jpg" class="img-responsive"  alt="">
 																</div>			
 															</a>		
 														</figure>	
@@ -588,10 +582,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														<figure>		
 															<a href="single.html">
 																<div class="grid-img">
-																	<img  src="images/p24.jpg" class="img-responsive" alt="">
+																	<img  src="{{asset('front')}}/images/p24.jpg" class="img-responsive" alt="">
 																</div>
 																<div class="grid-img">
-																	<img  src="images/p23.jpg" class="img-responsive"  alt="">
+																	<img  src="{{asset('front')}}/images/p23.jpg" class="img-responsive"  alt="">
 																</div>			
 															</a>		
 														</figure>	
@@ -616,10 +610,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														<figure>		
 															<a href="single.html">
 																<div class="grid-img">
-																	<img  src="images/p26.jpg" class="img-responsive" alt="">
+																	<img  src="{{asset('front')}}/images/p26.jpg" class="img-responsive" alt="">
 																</div>
 																<div class="grid-img">
-																	<img  src="images/p25.jpg" class="img-responsive"  alt="">
+																	<img  src="{{asset('front')}}/images/p25.jpg" class="img-responsive"  alt="">
 																</div>			
 															</a>		
 														</figure>	
@@ -644,10 +638,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														<figure>		
 															<a href="single.html">
 																<div class="grid-img">
-																	<img  src="images/p10.jpg" class="img-responsive" alt="">
+																	<img  src="{{asset('front')}}/images/p10.jpg" class="img-responsive" alt="">
 																</div>
 																<div class="grid-img">
-																	<img  src="images/p9.jpg" class="img-responsive"  alt="">
+																	<img  src="{{asset('front')}}/images/p9.jpg" class="img-responsive"  alt="">
 																</div>			
 															</a>		
 														</figure>	
@@ -681,7 +675,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="latest-grids">
 						<div class="col-md-4 latest-grid">
 							<div class="latest-top">
-								<img  src="images/l1.jpg" class="img-responsive"  alt="">
+								<img  src="{{asset('front')}}/images/l1.jpg" class="img-responsive"  alt="">
 								<div class="latest-text">
 									<h4>Men</h4>
 								</div>
@@ -692,7 +686,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="col-md-4 latest-grid">
 							<div class="latest-top">
-								<img  src="images/l2.jpg" class="img-responsive"  alt="">
+								<img  src="{{asset('front')}}/images/l2.jpg" class="img-responsive"  alt="">
 								<div class="latest-text">
 									<h4>Shoes</h4>
 								</div>
@@ -703,7 +697,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="col-md-4 latest-grid">
 							<div class="latest-top">
-								<img  src="images/l3.jpg" class="img-responsive"  alt="">
+								<img  src="{{asset('front')}}/images/l3.jpg" class="img-responsive"  alt="">
 								<div class="latest-text">
 									<h4>Women</h4>
 								</div>
@@ -717,7 +711,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="latest-grids">
 						<div class="col-md-4 latest-grid">
 							<div class="latest-top">
-								<img  src="images/l4.jpg" class="img-responsive"  alt="">
+								<img  src="{{asset('front')}}/images/l4.jpg" class="img-responsive"  alt="">
 								<div class="latest-text">
 									<h4>Watch</h4>
 								</div>
@@ -728,7 +722,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="col-md-4 latest-grid">
 							<div class="latest-top">
-								<img  src="images/l5.jpg" class="img-responsive"  alt="">
+								<img  src="{{asset('front')}}/images/l5.jpg" class="img-responsive"  alt="">
 								<div class="latest-text">
 									<h4>Bag</h4>
 								</div>
@@ -739,7 +733,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="col-md-4 latest-grid">
 							<div class="latest-top">
-								<img  src="images/l6.jpg" class="img-responsive"  alt="">
+								<img  src="{{asset('front')}}/images/l6.jpg" class="img-responsive"  alt="">
 								<div class="latest-text">
 									<h4>Cameras</h4>
 								</div>
@@ -762,10 +756,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<figure>		
 											<a href="single.html">
 												<div class="grid-img">
-													<img  src="images/p28.jpg" class="img-responsive" alt="">
+													<img  src="{{asset('front')}}/images/p28.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="images/p27.jpg" class="img-responsive"  alt="">
+													<img  src="{{asset('front')}}/images/p27.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	
@@ -793,10 +787,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<figure>		
 											<a href="single.html">
 												<div class="grid-img">
-													<img  src="images/p30.jpg" class="img-responsive" alt="">
+													<img  src="{{asset('front')}}/images/p30.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="images/p29.jpg" class="img-responsive"  alt="">
+													<img  src="{{asset('front')}}/images/p29.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	
@@ -821,10 +815,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<figure>		
 											<a href="single.html">
 												<div class="grid-img">
-													<img  src="images/s2.jpg" class="img-responsive" alt="">
+													<img  src="{{asset('front')}}/images/s2.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="images/s1.jpg" class="img-responsive"  alt="">
+													<img  src="{{asset('front')}}/images/s1.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	
@@ -849,10 +843,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<figure>		
 											<a href="single.html">
 												<div class="grid-img">
-													<img  src="images/s4.jpg" class="img-responsive" alt="">
+													<img  src="{{asset('front')}}/images/s4.jpg" class="img-responsive" alt="">
 												</div>
 												<div class="grid-img">
-													<img  src="images/s3.jpg" class="img-responsive"  alt="">
+													<img  src="{{asset('front')}}/images/s3.jpg" class="img-responsive"  alt="">
 												</div>			
 											</a>		
 										</figure>	
@@ -932,7 +926,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<p>&copy; 2016 New Shop . All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
 							</div>
 							<div class="copy-right">
-								<img src="images/card.png" alt=""/>
+								<img src="{{asset('front')}}/images/card.png" alt=""/>
 							</div>
 							<div class="clearfix"></div>
 						</div>
@@ -947,7 +941,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="modal-body">
 							<div class="news-gr">
 								<div class="col-md-5 new-grid1">
-								<img src="images/p5.jpg" class="img-responsive" alt="">
+								<img src="{{asset('front')}}/images/p5.jpg" class="img-responsive" alt="">
 								</div>
 									<div class="col-md-7 new-grid">
 										<h5>Ten Women's Cotton Viscose fabric Grey Shrug</h5>
@@ -992,7 +986,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<span class="size">XL / XXL / S </span>
 										<p ><del>$100.00</del><em class="item_price"> $70.00 </em></p>
 										<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="images/of2.png">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="{{asset('front')}}/images/of2.png">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -1011,7 +1005,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="modal-body">
 							<div class="news-gr">
 								<div class="col-md-5 new-grid1">
-								<img src="images/p7.jpg" class="img-responsive" alt="">
+								<img src="{{asset('front')}}/images/p7.jpg" class="img-responsive" alt="">
 								</div>
 									<div class="col-md-7 new-grid">
 										<h5>Ten Women's Cotton Viscose fabric Grey Shrug</h5>
@@ -1056,7 +1050,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<span class="size">XL / XXL / S </span>
 										<p ><del>$100.00</del><em class="item_price"> $70.00 </em></p>
 										<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="images/of2.png">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="{{asset('front')}}/images/of2.png">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -1075,7 +1069,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="modal-body">
 							<div class="news-gr">
 								<div class="col-md-5 new-grid1">
-								<img src="images/p10.jpg" class="img-responsive" alt="">
+								<img src="{{asset('front')}}/images/p10.jpg" class="img-responsive" alt="">
 								</div>
 									<div class="col-md-7 new-grid">
 										<h5>Ten Men's Cotton Viscose fabric Grey Shrug</h5>
@@ -1120,7 +1114,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<span class="size">XL / XXL / S </span>
 										<p ><del>$100.00</del><em class="item_price"> $70.00 </em></p>
 										<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="images/of2.png">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="{{asset('front')}}/images/of2.png">Add to Cart</button>
 										</div>
 									</div>
 								</div>
@@ -1139,7 +1133,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="modal-body">
 							<div class="news-gr">
 								<div class="col-md-5 new-grid1">
-								<img src="images/p12.jpg" class="img-responsive" alt="">
+								<img src="{{asset('front')}}/images/p12.jpg" class="img-responsive" alt="">
 								</div>
 									<div class="col-md-7 new-grid">
 										<h5>Ten Men's Cotton Viscose fabric Grey Shrug</h5>
@@ -1184,7 +1178,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<span class="size">XL / XXL / S </span>
 										<p ><del>$100.00</del><em class="item_price"> $70.00 </em></p>
 										<div class="add">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="images/of2.png">Add to Cart</button>
+										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana" data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="{{asset('front')}}/images/of2.png">Add to Cart</button>
 										</div>
 									</div>
 								</div>
