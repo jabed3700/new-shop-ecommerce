@@ -57,7 +57,7 @@
                            <select name="brand_id" id="" class="form-control">
                              <option value="">-- Select Brand Name --</option>
                              @foreach ($brands as $brand)
-                             <option value="{{$brand->id}}">{{$brand ->name}}</option>
+                             <option value="{{$brand->id}}">{{$brand ->brand_name}}</option>
                              @endforeach
                            </select>
                          <span class="text-danger">{{$errors->has('brand_id') ? $errors->first('brand_id'):''}}</span>

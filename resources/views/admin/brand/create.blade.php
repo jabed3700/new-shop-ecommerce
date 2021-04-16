@@ -36,8 +36,8 @@
                             <label for="Name">Name</label>
                         </div>
                         <div class="col-md-9">
-                        <input type="text" name="name" class="form-control" id="Name" placeholder="brand name">
-                        <span class="text-danger">{{$errors->has('name') ? $errors->first('name'):''}}</span>
+                        <input type="text" name="brand_name" class="form-control" id="Name" placeholder="brand name">
+                        <span class="text-danger">{{$errors->has('brand_name') ? $errors->first('brand_name'):''}}</span>
                         </div>
                      </div>
                     </div>

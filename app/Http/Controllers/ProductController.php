@@ -6,12 +6,19 @@ use App\Category;
 use App\Brand;
 use Illuminate\Http\Request;
 use App\Product;
+use DB;
 
 class ProductController extends Controller
 {
     function index(){
         // $products = new Product();
-        return view('admin.product.index',);
+        $products = DB::table('products')
+                    ->join('categories','products.category_id', '=' ,'categories.id')
+                    ->join('brands','products.brand_id', '=','brands.id')
+                    ->select('products.*','categories.name','brands.brand_name')
+                    ->get();
+                    // return $products;
+        return view('admin.product.index',['products'=>$products]);
     }
 
     function create(){
@@ -31,18 +38,16 @@ class ProductController extends Controller
         return view('admin.product.edit');
     }
 
-    function store(Request $request){
-        // return $request->all();
-
-        // validation 
+    protected function productInfoValidate($request){
         $this->validate($request,[
             'category_id' => 'required',
             'brand_id'   => 'required',
             'product_name' => 'required',
             'product_image' => 'required',
             ]);
+    }
 
-        // image 
+    protected function productImageUpload($request){
         $productImage = $request->file('product_image');
         $imageName=$productImage->getClientOriginalName();
         // return $imageName;
@@ -50,8 +55,10 @@ class ProductController extends Controller
         $productImage->move($directory,$imageName);
 
         $imageUrl = $directory.$imageName;
+        return $imageUrl;
+    }
 
-        // data save 
+    protected function saveProductBasicInfo($request, $imageUrl){
         $product = new Product();
         $product ->category_id = $request->category_id;
         $product ->brand_id = $request->brand_id;
@@ -65,7 +72,22 @@ class ProductController extends Controller
         $product ->publication_status = $request->publication_status;
 
         $product->save();
+    }
 
-        return redirect('/product/index')->with('message','product upload successfully');
+    function store(Request $request){
+        // return $request->all();
+
+        // validation 
+       $this->productInfoValidate($request);
+
+       // image 
+       $imageUrl = $this->productImageUpload($request);
+        
+
+      // data save 
+      $this->saveProductBasicInfo($request, $imageUrl);
+      
+
+     return redirect('/product/index')->with('message','product upload successfully');
     }
 }

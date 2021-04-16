@@ -31,48 +31,40 @@
                 <div class="card-body p-0">
                   <h3 class="text-center text-success mb-0 mt-3">{{Session::get('message')}}</h3>
 
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>SL No</th>
-                        <th>product name</th>
-                        <th>Banrad description</th>
-                        <th>Publication_status</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {{-- @php($i=1)
-                      @foreach ($products as $product) --}}
-                      <tr>
-                        <td>demo</td>
-                        <td>demo</td>
-                        <td>demo</td>
-                        <td>demo</td>
-                        <td>
-
-                          {{-- @if($product->publication_status==0)
-                          <a href="{{route('product.unpublished', ['id'=>$product->id] )}}" class="btn btn-primary btn-sm">
-                            <span class="fas fa-arrow-up"></span>
-                          </a>
-                          @else
-                          <a href="{{route('product.published',['id'=>$product->id])}}" class="btn btn-warning btn-sm">
-                            <span class="fas fa-arrow-down"></span>
-                          </a>
-                          @endif
-
-                          <a href="{{route('product.edit',['id'=>$product->id])}}" class="btn btn-success btn-sm">
-                            <span class="fas fa-edit"></span>
-                          </a>
-                          <a href="{{route('product.delete',['id'=>$product->id])}}" class="btn btn-danger btn-sm">
-                            <span class="fas fa-trash"></span>
-                          </a> --}}
-                          demo
-                        </td>
-                      </tr>
-                      {{-- @endforeach --}}
-                    </tbody>
-                  </table>
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>SL No</th>
+                          <th>Category Name</th>
+                          <th>Brand Name</th>
+                          <th>product Name</th>
+                          <th>product Image</th>
+                          <th>product Price</th>
+                          <th>product Quantity</th>
+                          <th>Publication_status</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @php($i=1)
+                        @foreach ($products as $product)
+                        <tr>
+                         
+                          <td>{{$i++}}</td>
+                          <td>{{$product->name}}</td>
+                          <td>{{$product->brand_name}}</td>
+                          <td>{{$product->product_name}}</td>                     
+                          <td><img src="{{asset($product->product_image)}}" alt="" style="width:60px"></td>                     
+                          <td>{{$product->product_price}}</td>                     
+                          <td>{{$product->product_quantity}}</td>                     
+                          <td>{{$product->publication_status == 1 ? 'published':'unpublished'}}</td>                     
+                          <td>demodemo</td>  
+                        </tr>
+                        @endforeach                   
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
                 <!-- /.card-body -->
               </div>

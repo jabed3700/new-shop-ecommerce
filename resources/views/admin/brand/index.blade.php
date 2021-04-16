@@ -46,7 +46,7 @@
                       @foreach ($brands as $brand)
                       <tr>
                         <td>{{ $i++ }}</td>
-                        <td>{{$brand->name}}</td>
+                        <td>{{$brand->brand_name}}</td>
                         <td>{{$brand->description}}</td>
                         <td>{{$brand->publication_status == 0 ? 'published':'unpublished'}}</td>
                         <td>

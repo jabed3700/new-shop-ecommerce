@@ -27,7 +27,7 @@ class BrandController extends Controller
         // dd($request->all());
         $this->validate($request,[
 
-            'name' =>'required|regex:/^[\pL\s-]+$/u|max:15|min:2',
+            'brand_name' =>'required|regex:/^[\pL\s-]+$/u|max:15|min:2',
             'description' => 'required',
             'publication_status' => 'required'
         ]);
@@ -35,7 +35,7 @@ class BrandController extends Controller
 
         $brand = new Brand();
 
-        $brand->name = $request->name;
+        $brand->brand_name = $request->brand_name;
         $brand->description = $request->description;
         $brand -> publication_status  = $request->publication_status;
         $brand->save();
@@ -77,7 +77,7 @@ class BrandController extends Controller
     //    return $request->all();
 
     $brand = Brand::find($request->brand_id);
-    $brand->name = $request->name;
+    $brand->brand_name = $request->brand_name;
     $brand->description = $request->description;
     $brand->publication_status = $request->publication_status;
 

@@ -36,7 +36,7 @@
                             <label for="Name">Name</label>
                         </div>
                         <div class="col-md-9">
-                        <input type="text" name="name" class="form-control" id="Name" placeholder="brand name" value="{{$brand->name}}">
+                        <input type="text" name="brand_name" class="form-control" id="Name" placeholder="brand name" value="{{$brand->brand_name}}">
                         <input type="hidden" value="{{$brand->id}}" name="brand_id">
                         </div>
                      </div>
