@@ -13,14 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/',function(){
-    return view('front.index');
-})->name('/');
+// Route::get('/',function(){
+//     return view('front.index');
+// })->name('/');
 
+Route::get('/','FrontController@index')->name('/');
+Route::get('/category/product/{id}','FrontController@category_product')->name('category.product');
 // Admin panel 
 Route::get('/dashboard','DashboardController@index')->name('dashboard');
 
