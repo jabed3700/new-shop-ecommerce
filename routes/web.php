@@ -34,6 +34,9 @@ Route::get('/brand/edit','BrandController@edit')->name('brand.edit');
 Route::get('/branch/update','BrandController@update')->name('brand.update');
 Route::get('/brand/delete','BrandController@delete')->name('brand.delete');
 
+Route::get('/brand/unpublished/{id}','BrandController@unpublished')->name('brand.unpublished');
+Route::get('/brand/published','BrandController@published')->name('brand.published');
+
 
 // tag 
 Route::get('/tag/index','TagController@index')->name('tag.index');

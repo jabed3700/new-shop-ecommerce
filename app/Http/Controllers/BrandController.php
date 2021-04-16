@@ -9,7 +9,13 @@ use App\Brand;
 class BrandController extends Controller
 {
     function index(){
-        return view('admin.brand.index');
+        $brands = Brand::all();
+
+        // return($brands);
+
+        return view('admin.brand.index',[
+            'brands' => $brands,
+        ]);
     }
 
     function create(){
@@ -27,7 +33,16 @@ class BrandController extends Controller
         $brand -> publication_status  = $request->publication_status;
         $brand->save();
 
-        return redirect('/');
+        return redirect('/brand/create')->with('message','Brand created successfully');
 
+    }
+
+
+    function unpublished($id){
+        return $id;
+    }
+
+    function published(){
+        
     }
 }

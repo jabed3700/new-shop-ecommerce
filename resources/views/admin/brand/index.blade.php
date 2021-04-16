@@ -32,24 +32,42 @@
                   <table class="table table-striped">
                     <thead>
                       <tr>
-                        <th style="width: 10px">#</th>
-                        <th>Task</th>
-                        <th>Progress</th>
-                        <th style="width: 40px">Label</th>
+                        <th>SL No</th>
+                        <th>Brand name</th>
+                        <th>Banrad description</th>
+                        <th>Publication_status</th>
+                        <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
+                      @php($i=1)
+                      @foreach ($brands as $brand)
                       <tr>
-                        <td>1.</td>
-                        <td>Update software</td>
+                        <td>{{ $i++ }}</td>
+                        <td>{{$brand->name}}</td>
+                        <td>{{$brand->description}}</td>
+                        <td>{{$brand->publication_status == 0 ? 'published':'unpublished'}}</td>
                         <td>
-                          <div class="progress progress-xs">
-                            <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                          </div>
+
+                          @if($brand->publication_status==0)
+                          <a href="{{route('brand.unpublished', ['id'=>$brand->id] )}}" class="btn btn-primary btn-sm">
+                            <span class="fas fa-arrow-up"></span>
+                          </a>
+                          @else
+                          <a href="" class="btn btn-warning btn-sm">
+                            <span class="fas fa-arrow-down"></span>
+                          </a>
+                          @endif
+
+                          <a href="" class="btn btn-success btn-sm">
+                            <span class="fas fa-edit"></span>
+                          </a>
+                          <a href="" class="btn btn-danger btn-sm">
+                            <span class="fas fa-trash"></span>
+                          </a>
                         </td>
-                        <td><span class="badge bg-danger">55%</span></td>
                       </tr>
-                    
+                      @endforeach
                     </tbody>
                   </table>
                 </div>

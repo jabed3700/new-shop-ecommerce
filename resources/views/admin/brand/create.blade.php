@@ -29,6 +29,7 @@
                 <form role="form" action="{{route('brand.store')}}" method="POST">
                     @csrf
                   <div class="card-body">
+                    <h3 class="text-center text-success">{{Session::get('message')}}</h2>
                     <div class="form-group">
                      <div class="row">
                         <div class="col-md-3">
