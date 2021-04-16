@@ -48,7 +48,7 @@
             </ul>
           </li> --}}
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('category.index')}}" class="nav-link">
               <i class="nav-icon fas fa-tags"></i>
               <p>
                 Category           
@@ -56,7 +56,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('brand.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-tag"></i>
+              <p>
+                Brand           
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('tag.index')}}" class="nav-link">
               <i class="nav-icon fas fa-tag"></i>
               <p>
                 Tag           

@@ -19,12 +19,26 @@ Route::get('/', function () {
 
 Route::get('/',function(){
     return view('front.index');
-});
+})->name('/');
 
 // Admin panel 
 Route::get('/dashboard','DashboardController@index')->name('dashboard');
 
+Route::resource('/category', "CategoryController");
 
+// Brand 
+Route::get('/brand/index','BrandController@index')->name('brand.index');
+Route::get('/brand/create','BrandController@index')->name('brand.create');
+Route::post('/brand/store','BrandController@store')->name('brand.store');
+Route::get('/brand/edit','BrandController@edit')->name('brand.edit');
+Route::get('/branch/update','BrandController@update')->name('brand.update');
+Route::get('/brand/delete','BrandController@delete')->name('brand.delete');
+
+
+// tag 
+Route::get('/tag/index','TagController@index')->name('tag.index');
+Route::get('/tag/create','TagController@create')->name('tag.create');
+Route::post('/tag/store','TagController@store')->name('tag.store');
 
 
 Auth::routes();
