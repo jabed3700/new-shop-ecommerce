@@ -25,7 +25,11 @@ class BrandController extends Controller
     function store(Request $request){
 
         // dd($request->all());
+        $this->validate($request,[
 
+            'name' =>'required'
+            
+        ]);
         $brand = new Brand();
 
         $brand->name = $request->name;
