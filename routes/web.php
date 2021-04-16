@@ -28,7 +28,7 @@ Route::resource('/category', "CategoryController");
 
 // Brand 
 Route::get('/brand/index','BrandController@index')->name('brand.index');
-Route::get('/brand/create','BrandController@index')->name('brand.create');
+Route::get('/brand/create','BrandController@create')->name('brand.create');
 Route::post('/brand/store','BrandController@store')->name('brand.store');
 Route::get('/brand/edit','BrandController@edit')->name('brand.edit');
 Route::get('/branch/update','BrandController@update')->name('brand.update');
