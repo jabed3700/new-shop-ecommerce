@@ -37,10 +37,11 @@
                         </div>
                         <div class="col-md-9">
                         {{-- <input type="text" name="name" class="form-control" id="Name" placeholder="product name"> --}}
-                          <select name="name" id="" class="form-control">
+                          <select name="category_id" id="" class="form-control">
                             <option value="">-- Select Category Name --</option>
-                            <option value="">one</option>
-                            <option value="">two</option>
+                            @foreach ($categories as $category)                          
+                            <option value="{{$category->id}}">{{$category ->name}}</option>
+                            @endforeach
                           </select>
                         <span class="text-danger">{{$errors->has('name') ? $errors->first('name'):''}}</span>
                         </div>
@@ -48,31 +49,103 @@
                     </div>
                     <div class="form-group">
                       <div class="row">
+                         <div class="col-md-3">
+                             <label for="Name">Brand name</label>
+                         </div>
+                         <div class="col-md-9">
+                         {{-- <input type="text" name="name" class="form-control" id="Name" placeholder="product name"> --}}
+                           <select name="brand_id" id="" class="form-control">
+                             <option value="">-- Select Brand Name --</option>
+                             @foreach ($brands as $brand)
+                             <option value="{{$brand->id}}">{{$brand ->name}}</option>
+                             @endforeach
+                           </select>
+                         <span class="text-danger">{{$errors->has('name') ? $errors->first('name'):''}}</span>
+                         </div>
+                      </div>
+                     </div>
+                    <div class="form-group">
+                      <div class="row">
                           <div class="col-md-3">
-                            <label for="Description">Description</label>
+                            <label for="product_name">Product Name</label>
                           </div>
                           <div class="col-md-9">
-                            <textarea class="form-control" name="description" id="Description" cols="30" rows="4" placeholder="product description"></textarea>
+                            <input class="form-control" type="text" name="product_name" id="product_name" placeholder="product name">
                             <span class="text-danger">{{$errors->has('description') ? $errors->first('description'):''}}</span>
                           </div>
                       </div>
                     </div>
                     <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-3">
-                              <label for="exampleInputPassword1">Pushlish </label>
-                            </div>
-                            <div class="col-md-9">
-                             <label><input type="radio"  name="publication_status" value="0">Published
-                            </label>
-                             <label><input type="radio" name="publication_status" value="1">Unpublished
-                            </label>
-                            <br>
-                            <span class="text-danger">{{$errors->has('publication_status') ? $errors->first('publication_status'):''}}</span>
-                           
-                            </div>
-                        </div>
+                      <div class="row">
+                          <div class="col-md-3">
+                            <label for="product_price">Product Price</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input class="form-control" type="number" name="product_price" id="product_price" placeholder="product price">
+                            <span class="text-danger">{{$errors->has('description') ? $errors->first('description'):''}}</span>
+                          </div>
                       </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                          <div class="col-md-3">
+                            <label for="product_quantity">Product Quantity</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input class="form-control" type="number" name="product_quantity" id="product_quantity" placeholder="product quantity">
+                            <span class="text-danger">{{$errors->has('description') ? $errors->first('description'):''}}</span>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                          <div class="col-md-3">
+                            <label for="short_description">Short description</label>
+                          </div>
+                          <div class="col-md-9">
+                            <textarea class="form-control" name="short_description" id="short_description" cols="30" rows="4" placeholder="Short description"></textarea>
+                            <span class="text-danger">{{$errors->has('description') ? $errors->first('description'):''}}</span>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                          <div class="col-md-3">
+                            <label for="long_description">Long description</label>
+                          </div>
+                          <div class="col-md-9">
+                            <textarea class="form-control" name="long_description" id="long_description" cols="30" rows="4" placeholder="Long description"></textarea>
+                            <span class="text-danger">{{$errors->has('description') ? $errors->first('description'):''}}</span>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                          <div class="col-md-3">
+                            <label for="product_image">Product Image</label>
+                          </div>
+                          <div class="col-md-9">
+                            <input type="file" class="form-control-file" name="product_image" id="product_image"  placeholder="Product image" accept="image/*">
+                            <span class="text-danger">{{$errors->has('description') ? $errors->first('description'):''}}</span>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                          <div class="col-md-3">
+                            <label for="exampleInputPassword1">Pushlication status</label>
+                          </div>
+                          <div class="col-md-9">
+                           <label><input type="radio"  name="publication_status" value="0">Published
+                          </label>
+                           <label><input type="radio" name="publication_status" value="1">Unpublished
+                          </label>
+                          <br>
+                          <span class="text-danger">{{$errors->has('publication_status') ? $errors->first('publication_status'):''}}</span>
+                         
+                          </div>
+                      </div>
+                    </div>
                       <div class="form-group">
                         <div class="row">
                             <div class="col-md-9 offset-md-3">
