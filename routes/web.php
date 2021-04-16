@@ -31,11 +31,19 @@ Route::get('/brand/index','BrandController@index')->name('brand.index');
 Route::get('/brand/create','BrandController@create')->name('brand.create');
 Route::post('/brand/store','BrandController@store')->name('brand.store');
 Route::get('/brand/edit/{id}','BrandController@edit')->name('brand.edit');
-Route::post('/branch/update','BrandController@update')->name('brand.update');
+Route::post('/brand/update','BrandController@update')->name('brand.update');
 Route::get('/brand/delete/{id}','BrandController@delete')->name('brand.delete');
 
 Route::get('/brand/unpublished/{id}','BrandController@unpublished')->name('brand.unpublished');
 Route::get('/brand/published/{id}','BrandController@published')->name('brand.published');
+
+// Brand 
+Route::get('/product/index','ProductController@index')->name('product.index');
+Route::get('/product/create','ProductController@create')->name('product.create');
+Route::post('/product/store','ProductController@store')->name('product.store');
+Route::get('/product/edit/{id}','ProductController@edit')->name('product.edit');
+Route::post('/product/update','ProductController@update')->name('product.update');
+Route::get('/product/delete/{id}','ProductController@delete')->name('product.delete');
 
 
 // tag 
