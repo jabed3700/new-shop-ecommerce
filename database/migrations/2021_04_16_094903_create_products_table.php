@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->integer('category_id');
             $table->integer('brand_id');
             $table->string('product_name');
-            $table->float('product_price');
+            $table->float('product_price',10,2);
             $table->integer('product_quantity');
             $table->text('short_description');
             $table->text('long_description');

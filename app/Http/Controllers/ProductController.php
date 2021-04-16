@@ -32,6 +32,40 @@ class ProductController extends Controller
     }
 
     function store(Request $request){
-        return $request->all();
+        // return $request->all();
+
+        // validation 
+        $this->validate($request,[
+            'category_id' => 'required',
+            'brand_id'   => 'required',
+            'product_name' => 'required',
+            'product_image' => 'required',
+            ]);
+
+        // image 
+        $productImage = $request->file('product_image');
+        $imageName=$productImage->getClientOriginalName();
+        // return $imageName;
+        $directory = 'product-image/';
+        $productImage->move($directory,$imageName);
+
+        $imageUrl = $directory.$imageName;
+
+        // data save 
+        $product = new Product();
+        $product ->category_id = $request->category_id;
+        $product ->brand_id = $request->brand_id;
+        $product ->product_name = $request->product_name;
+        $product ->product_price = $request->product_price;
+        $product ->product_quantity = $request->product_quantity;
+        $product ->short_description = $request->short_description;
+        $product ->long_description = $request->long_description;
+        $product ->product_image = $imageUrl;
+        $product ->publication_status = $request->publication_status;
+        $product ->publication_status = $request->publication_status;
+
+        $product->save();
+
+        return redirect('/product/index')->with('message','product upload successfully');
     }
 }

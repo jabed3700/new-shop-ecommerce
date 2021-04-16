@@ -26,7 +26,7 @@
             <div class="card card-primary">
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form role="form" action="{{route('product.store')}}" method="POST">
+                <form role="form" action="{{route('product.store')}}" method="POST" enctype="multipart/form-data"> 
                     @csrf
                   <div class="card-body">
                     <h3 class="text-center text-success">{{Session::get('message')}}</h2>
@@ -43,7 +43,7 @@
                             <option value="{{$category->id}}">{{$category ->name}}</option>
                             @endforeach
                           </select>
-                        <span class="text-danger">{{$errors->has('name') ? $errors->first('name'):''}}</span>
+                        <span class="text-danger">{{$errors->has('category_id') ? $errors->first('category_id'):''}}</span>
                         </div>
                      </div>
                     </div>
@@ -60,7 +60,7 @@
                              <option value="{{$brand->id}}">{{$brand ->name}}</option>
                              @endforeach
                            </select>
-                         <span class="text-danger">{{$errors->has('name') ? $errors->first('name'):''}}</span>
+                         <span class="text-danger">{{$errors->has('brand_id') ? $errors->first('brand_id'):''}}</span>
                          </div>
                       </div>
                      </div>
@@ -71,7 +71,7 @@
                           </div>
                           <div class="col-md-9">
                             <input class="form-control" type="text" name="product_name" id="product_name" placeholder="product name">
-                            <span class="text-danger">{{$errors->has('description') ? $errors->first('description'):''}}</span>
+                            <span class="text-danger">{{$errors->has('product_name') ? $errors->first('product_name'):''}}</span>
                           </div>
                       </div>
                     </div>
@@ -126,7 +126,7 @@
                           </div>
                           <div class="col-md-9">
                             <input type="file" class="form-control-file" name="product_image" id="product_image"  placeholder="Product image" accept="image/*">
-                            <span class="text-danger">{{$errors->has('description') ? $errors->first('description'):''}}</span>
+                            <span class="text-danger">{{$errors->has('product_image') ? $errors->first('product_image'):''}}</span>
                           </div>
                       </div>
                     </div>
