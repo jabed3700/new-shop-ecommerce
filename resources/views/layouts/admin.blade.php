@@ -17,6 +17,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{asset('admin')}}/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <script src="{{asset('admin')}}/ckeditor/ckeditor.js"></script>
+	<script src="{{asset('admin')}}/ckeditor/samples/js/sample.js"></script>
+	<link rel="stylesheet" href="{{asset('admin')}}/ckeditor/samples/css/samples.css">
+	<link rel="stylesheet" href="{{asset('admin')}}/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css">
+<style>
+  .content ul, .content ol, .content pre, .content blockquote, .content textarea:not([class^="cke"]), .content .cke {
+    margin: 0;
+}
+</style>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -180,5 +190,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{asset('admin')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('admin')}}/dist/js/adminlte.min.js"></script>
+<script>
+	initSample();
+</script>
 </body>
 </html>

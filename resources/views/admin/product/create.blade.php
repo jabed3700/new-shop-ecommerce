@@ -103,7 +103,7 @@
                             <label for="short_description">Short description</label>
                           </div>
                           <div class="col-md-9">
-                            <textarea class="form-control" name="short_description" id="short_description" cols="30" rows="4" placeholder="Short description"></textarea>
+                            <textarea class="form-control mt-0" name="short_description" id="short_description" cols="30" rows="4" placeholder="Short description"></textarea>
                             <span class="text-danger">{{$errors->has('description') ? $errors->first('description'):''}}</span>
                           </div>
                       </div>
@@ -114,7 +114,7 @@
                             <label for="long_description">Long description</label>
                           </div>
                           <div class="col-md-9">
-                            <textarea class="form-control" name="long_description" id="long_description" cols="30" rows="4" placeholder="Long description"></textarea>
+                            <textarea class="form-control mt-0" name="long_description" id="editor" cols="30" rows="4" placeholder="Long description"></textarea>
                             <span class="text-danger">{{$errors->has('description') ? $errors->first('description'):''}}</span>
                           </div>
                       </div>
