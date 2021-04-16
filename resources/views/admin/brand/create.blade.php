@@ -37,6 +37,7 @@
                         </div>
                         <div class="col-md-9">
                         <input type="text" name="name" class="form-control" id="Name" placeholder="brand name">
+                        <span class="text-danger">{{$errors->has('name') ? $errors->first('name'):''}}</span>
                         </div>
                      </div>
                     </div>
@@ -47,6 +48,7 @@
                           </div>
                           <div class="col-md-9">
                             <textarea class="form-control" name="description" id="Description" cols="30" rows="4" placeholder="brand description"></textarea>
+                            <span class="text-danger">{{$errors->has('description') ? $errors->first('description'):''}}</span>
                           </div>
                       </div>
                     </div>
@@ -56,11 +58,13 @@
                               <label for="exampleInputPassword1">Pushlish </label>
                             </div>
                             <div class="col-md-9">
-                             <label><input type="radio" checked name="publication_status" value="0">Published
+                             <label><input type="radio"  name="publication_status" value="0">Published
                             </label>
                              <label><input type="radio" name="publication_status" value="1">Unpublished
                             </label>
-          
+                            <br>
+                            <span class="text-danger">{{$errors->has('publication_status') ? $errors->first('publication_status'):''}}</span>
+                           
                             </div>
                         </div>
                       </div>

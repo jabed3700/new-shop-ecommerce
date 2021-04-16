@@ -27,9 +27,12 @@ class BrandController extends Controller
         // dd($request->all());
         $this->validate($request,[
 
-            'name' =>'required'
-            
+            'name' =>'required|regex:/^[\pL\s-]+$/u|max:15|min:2',
+            'description' => 'required',
+            'publication_status' => 'required'
         ]);
+
+
         $brand = new Brand();
 
         $brand->name = $request->name;
