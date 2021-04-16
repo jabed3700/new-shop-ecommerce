@@ -29,6 +29,8 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body p-0">
+                  <h3 class="text-center text-success mb-0 mt-3">{{Session::get('message')}}</h3>
+
                   <table class="table table-striped">
                     <thead>
                       <tr>
@@ -54,15 +56,15 @@
                             <span class="fas fa-arrow-up"></span>
                           </a>
                           @else
-                          <a href="" class="btn btn-warning btn-sm">
+                          <a href="{{route('brand.published',['id'=>$brand->id])}}" class="btn btn-warning btn-sm">
                             <span class="fas fa-arrow-down"></span>
                           </a>
                           @endif
 
-                          <a href="" class="btn btn-success btn-sm">
+                          <a href="{{route('brand.edit',['id'=>$brand->id])}}" class="btn btn-success btn-sm">
                             <span class="fas fa-edit"></span>
                           </a>
-                          <a href="" class="btn btn-danger btn-sm">
+                          <a href="{{route('brand.delete',['id'=>$brand->id])}}" class="btn btn-danger btn-sm">
                             <span class="fas fa-trash"></span>
                           </a>
                         </td>

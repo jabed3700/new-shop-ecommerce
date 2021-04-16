@@ -30,12 +30,12 @@ Route::resource('/category', "CategoryController");
 Route::get('/brand/index','BrandController@index')->name('brand.index');
 Route::get('/brand/create','BrandController@create')->name('brand.create');
 Route::post('/brand/store','BrandController@store')->name('brand.store');
-Route::get('/brand/edit','BrandController@edit')->name('brand.edit');
-Route::get('/branch/update','BrandController@update')->name('brand.update');
-Route::get('/brand/delete','BrandController@delete')->name('brand.delete');
+Route::get('/brand/edit/{id}','BrandController@edit')->name('brand.edit');
+Route::post('/branch/update','BrandController@update')->name('brand.update');
+Route::get('/brand/delete/{id}','BrandController@delete')->name('brand.delete');
 
 Route::get('/brand/unpublished/{id}','BrandController@unpublished')->name('brand.unpublished');
-Route::get('/brand/published','BrandController@published')->name('brand.published');
+Route::get('/brand/published/{id}','BrandController@published')->name('brand.published');
 
 
 // tag 

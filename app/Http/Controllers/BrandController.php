@@ -39,10 +39,51 @@ class BrandController extends Controller
 
 
     function unpublished($id){
-        return $id;
+        // return $id;
+
+        $brand  =  Brand::find($id);
+
+        // return $brand;
+
+        $brand->publication_status = 1;
+        $brand ->save();
+
+        return redirect('/brand/index')->with('message','brand unpublished successfully');
     }
 
-    function published(){
+    function published($id){
+        // return $id;
+        $brand  =  Brand::find($id);
+        $brand->publication_status=0;
+        $brand->save();
+
+        return redirect('/brand/index')->with('message','brand published successfully');
+    }
+
+    function edit($id){
+        // return $id;
+        $brand = Brand::find($id);
+        return view('admin.brand.edit',['brand'=>$brand]);
+    } 
+
+    function update(Request $request){
+    //    return $request->all();
+
+    $brand = Brand::find($request->brand_id);
+    $brand->name = $request->name;
+    $brand->description = $request->description;
+    $brand->publication_status = $request->publication_status;
+
+    $brand->save();
+
+    return redirect('/brand/index')->with('message','brand updated successfully');
+    }
+
+    function delete($id){
+        $brand = Brand::find($id);
+        $brand->delete();
+
+        return redirect('/brand/index')->with('message','brand deleted successfully');
         
     }
 }
