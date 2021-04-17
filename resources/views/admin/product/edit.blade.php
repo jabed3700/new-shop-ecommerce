@@ -27,7 +27,7 @@
             <div class="card card-primary">
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form role="form" action="{{route('product.store')}}" method="POST" enctype="multipart/form-data"> 
+                <form role="form" action="{{route('product.update')}}" method="POST" enctype="multipart/form-data" name="editProductForm"> 
                     @csrf
                   <div class="card-body">
                     <h3 class="text-center text-success">{{Session::get('message')}}</h2>
@@ -72,6 +72,7 @@
                           </div>
                           <div class="col-md-9">
                             <input class="form-control" type="text" name="product_name" id="product_name" placeholder="product name" value="{{$product->product_name}}">
+                            <input class="form-control" type="hidden" name="product_id" value="{{$product->id}}">
                             <span class="text-danger">{{$errors->has('product_name') ? $errors->first('product_name'):''}}</span>
                           </div>
                       </div>
@@ -127,6 +128,8 @@
                           </div>
                           <div class="col-md-9">
                             <input type="file" class="form-control-file" name="product_image" id="product_image"  placeholder="Product image" accept="image/*">
+                            <br>
+                            <img src="{{asset($product->product_image)}}" width="80" height="80" alt="">
                             <span class="text-danger">{{$errors->has('product_image') ? $errors->first('product_image'):''}}</span>
                           </div>
                       </div>
@@ -165,4 +168,8 @@
     </div>
       </section>
 
-@endsection
+      <script>
+        document.forms['editProductForm'].elements['category_id'].value= '{{$product->category_id}}';
+        document.forms['editProductForm'].elements['brand_id'].value= '{{$product->brand_id}}';
+      </script>
+@endsection 

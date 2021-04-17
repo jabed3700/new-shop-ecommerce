@@ -45,6 +45,30 @@ class ProductController extends Controller
             ]);
     }
 
+    function update(Request $request){
+        // return $request->all();
+        $product = Product::find($request->product_id);
+        // return $product;
+
+
+        // image 
+        // $productImage = $_FILES['product_image'];   //for raw php
+        // echo '<pre>';
+        // print_r($productImage);
+
+
+        
+
+        $product->category_id= $request->category_id;
+        $product->brand_id= $request->brand_id;
+        $product->product_name= $request->product_name;
+        $product->product_price= $request->product_price;
+        $product->product_quantity= $request->product_quantity;
+        $product->short_description= $request->short_description;
+        $product->long_description= $request->long_description;
+        $product->category_id= $request->category_id;
+    }
+
     protected function productInfoValidate($request){
         $this->validate($request,[
             'category_id' => 'required',
