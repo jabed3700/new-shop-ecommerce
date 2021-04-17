@@ -58,7 +58,21 @@
                           <td>{{$product->product_price}}</td>                     
                           <td>{{$product->product_quantity}}</td>                     
                           <td>{{$product->publication_status == 1 ? 'published':'unpublished'}}</td>                     
-                          <td>demodemo</td>  
+                          <td>
+                            <a href="" class="btn btn-info btn-sm" title="View Details">
+                              <span><i class="fas fa-search-plus"></i></span>
+                            </a>
+                            <a href="" class="btn btn-primary btn-sm" title="Published">
+                              <span><i class="fas fa-arrow-up"></i></span>
+                            </a>
+                            <a href="{{route('product.edit',['id'=>$product->id])}}" class="btn btn-success btn-sm" title="Edit">
+                              <span><i class="fas fa-edit"></i></span>
+                            </a>
+                            <a href="" class="btn btn-danger btn-sm" title="Delete">
+                              <span><i class="fas fa-trash"></i></span>
+                            </a>
+                          
+                          </td>  
                         </tr>
                         @endforeach                   
                       </tbody>

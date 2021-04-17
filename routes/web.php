@@ -40,7 +40,7 @@ Route::get('/brand/delete/{id}','BrandController@delete')->name('brand.delete');
 Route::get('/brand/unpublished/{id}','BrandController@unpublished')->name('brand.unpublished');
 Route::get('/brand/published/{id}','BrandController@published')->name('brand.published');
 
-// Brand 
+// Product 
 Route::get('/product/index','ProductController@index')->name('product.index');
 Route::get('/product/create','ProductController@create')->name('product.create');
 Route::post('/product/store','ProductController@store')->name('product.store');
