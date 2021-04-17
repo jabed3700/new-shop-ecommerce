@@ -28,4 +28,9 @@ class FrontController extends Controller
 
         return view('front.category',['categoryProducts' => $categoryProducts]);
     }
+
+    function product_details($id){
+        $product = Product::find($id);
+        return view('front.product_details',['product'=>$product]);
+    }
 }

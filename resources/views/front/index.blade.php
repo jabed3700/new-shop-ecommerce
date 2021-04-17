@@ -100,7 +100,7 @@
 								<div class="grid-arr">
 									<div  class="grid-arrival">
 										<figure>		
-											<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
+											<a href="{{route('product.details',['id'=>$product->id])}}" class="new-gri">
 												<div class="grid-img">
 													<img  src="{{asset($product->product_image)}}" class="img-responsive" alt="">
 												</div>

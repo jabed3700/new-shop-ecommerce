@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','FrontController@index')->name('/');
 Route::get('/category/product/{id}','FrontController@category_product')->name('category.product');
+Route::get('/product/details/{id}','FrontController@product_details')->name('product.details');
 // Admin panel 
 Route::get('/dashboard','DashboardController@index')->name('dashboard');
 
